@@ -1,0 +1,17 @@
+extends ethanLayout
+
+block content
+  div.background2
+    h1.title= title
+    div.right
+      if user
+        p.text Welcome #{user.name}
+    div.card2 
+      form(method="POST", action="/forum/edit/" + forum._id)
+        #form-group-title.form-group
+          input#title.input-control(name="title", type="text", value=forum.title)
+        #form-group-content.form-group
+          input#content.input-control(name="content", type="text", value=forum.content)
+        #form-group-submit.form-group
+          input.input-control(type="submit")
+    

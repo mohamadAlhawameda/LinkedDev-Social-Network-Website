@@ -1,0 +1,31 @@
+extends jpLayout 
+
+block content
+    div(class="user-connect")
+        div(class="container text-center")
+        div(class="row")
+            div(class="col-4 test")
+                p(class="Username") #{xUser.name}
+
+                img(src=`${xUser.image}` class="img-thumbnail")
+                div(class="usertag-jp")
+                br
+                p  Company: #{xUser.company}
+                p  Email: #{xUser.email}
+                p  Current Position: #{xUser.position}    
+                if xUser.socialMedia.linkedin                  
+                    a(href=`${xUser.socialMedia.linkedin}`)
+                        button(class="btn btn-primary") LinkedIn
+            div(class="col-8 info")
+                div(class="row")
+                div(class="col")
+                    h3(class="Learning") Technologies Learning                   
+                    ul(class="list-group") 
+                    each learn in xUser.learning
+                        li(class="list-group-item list-group-item-dark") #{learn}
+                br
+                div(class="col")
+                    h3(class="Known") Technologies Known
+                    ul(class="list-group")
+                    each known in xUser.expert
+                        li(class="list-group-item list-group-item-dark") #{known}

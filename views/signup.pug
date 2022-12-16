@@ -1,0 +1,32 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/moeDev.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+  body
+    block content
+        .signup-parent-container-modev
+            .signup-parent-filed-container-modev
+                h1.signup-text Sign Up
+                if errors
+                        each error in errors
+                            .errors-moedev
+                                p(style="color:red") #{error.msg}
+                form.signup-form-modev(action="/signup" method="POST")
+                    input.signup-input-moedev(type="text" name="name" placeholder="Name*" required)
+                    input.signup-input-moedev(type="text" name="email" placeholder="Email*" required)
+                    input.signup-input-moedev(type="password" name="password" placeholder="password*" required)
+                    input.signup-input-moedev(type="password" name="confirmPassword" placeholder="Confirm Password*" required)
+                    input.signup-input-moedev(type="text" name="position" placeholder="Position*" required)
+                    input.signup-input-moedev(type="text" name="company" placeholder="Company*" required)
+                    label.signup-text(for="learning") What tools are you leaning?
+                    input.signup-input-moedev(type="text" name="learning" placeholder="React, JavaScript, PHP*" required)
+                    label.signup-text(for="expert") What tools are you expert in?
+                    input.signup-input-moedev(type="text" name="expert" placeholder="Node.js, Java, AWS*" required)
+                    label.signup-text(for="socialMedia") Social Media
+                    input.signup-input-moedev(type="text" name="linkedin" placeholder="LinkedIn")
+                    input.signup-input-moedev(type="text" name="twitter" placeholder="Twitter")
+                    input.signup-input-moedev(type="text" name="website" placeholder="Website")
+                    input.btn.btn-dark(type="submit" value="Submit")
+                    a(href="/login") already have an account!
+

@@ -1,0 +1,19 @@
+extends ethanLayout
+
+block content
+  div.background2
+    h1.title= title
+    div.right
+      if user
+        p.text Welcome #{user.name}
+    if errors
+      each error in errors
+        p(style="color:red") #{error.msg}
+    div.card2   
+      form(method="POST", action="/forum/add")
+        #form-group-title 
+          input#title.input-control(name="title",placeholder="Title" type="text")
+        #form-group-content 
+          input#content.input-control(name="content",placeholder="Content"  type="text")
+        #form-group-submit 
+            input.input-control(type="submit")

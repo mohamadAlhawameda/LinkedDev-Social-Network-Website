@@ -1,0 +1,28 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/moeDev.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+  body
+    block content
+        .signup-parent-container-modev
+            .signup-parent-filed-container-modev
+                h1.signup-text Edit Profile
+                if errors
+                        each error in errors
+                            .errors-moedev
+                                p(style="color:red") #{error.msg}
+                form.signup-form-modev(action="/profile/edit" method="POST")
+                    input.signup-input-moedev(type="text" name="name" placeholder="Name*" value=user.name required)
+                    input.signup-input-moedev(type="text" name="email" placeholder="Email*" value=user.email required)
+                    input.signup-input-moedev(type="text" name="position" placeholder="Position*" value=user.position required)
+                    input.signup-input-moedev(type="text" name="company" placeholder="Company*" value=user.company required)
+                    label.signup-text(for="learning") What tools are you leaning?
+                    input.signup-input-moedev(type="text" name="learning" placeholder="React, JavaScript, PHP*" value=learning required)
+                    label.signup-text(for="expert") What tools are you expert in?
+                    input.signup-input-moedev(type="text" name="expert" placeholder="Node.js, Java, AWS*" value=expert required)
+                    label.signup-text(for="socialMedia") Social Media
+                    input.signup-input-moedev(type="text" name="linkedin" value=linkedin placeholder="LinkedIn")
+                    input.signup-input-moedev(type="text" name="twitter" value=twitter placeholder="Twitter")
+                    input.signup-input-moedev(type="text" name="website" value=website placeholder="Website")
+                    input.btn.btn-dark(type="submit" value="Submit")

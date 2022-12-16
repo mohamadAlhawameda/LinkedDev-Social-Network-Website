@@ -1,0 +1,121 @@
+
+body{
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('possiblebackground.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(17px);
+  height: 150vh;
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.user{
+  color:white;
+  font-size: 1em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
+  background: rgba(49, 94, 120, 0.51);
+  border-radius: 30px;
+
+}
+.user-connect{
+  color:white;
+  font-size: 1em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 100px;
+  background: rgba(49, 94, 120, 0.51);
+  border-radius: 30px;
+}
+.navbar-brand{
+  padding-left: 10px;
+  margin:0;
+}
+.img-thumbnail{
+  width: 180px;
+  margin: 0px;
+  padding: 0px;
+  border:3px solid black;
+}
+/* .col-8.info{
+  margin-right: 30px;
+} */
+.col-4.test{
+  align-items: center;
+  align-content: center;
+  margin-top: 10px;
+}
+.Username{
+  font-weight: bold;
+  font-size: 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn.btn-primary{
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 12px 32px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+.Learning{
+  font-weight: bold;
+  font-size: 30px;
+  border-bottom: 4px solid black;
+}
+.Known{
+  font-weight: bold;
+  font-size: 30px;
+  border-bottom: 4px solid black;
+}
+.col-8.info{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 20px;
+}
+.connectionKnown{
+  color:white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
+  background: rgba(49, 94, 120, 0.51);
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.usertag-jp p{
+  margin-bottom: 5px;
+}
+.card-body{
+  background-color: darkgray;
+
+}
+.card.test{
+  border:3px solid black;
+}
+.nav-item.logout{
+  align-items: flex-end;
+  justify-content: end;
+  text-align: end;
+}
+

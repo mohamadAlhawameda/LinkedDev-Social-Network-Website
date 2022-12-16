@@ -1,0 +1,25 @@
+extends ethanLayout
+
+block content
+  div.background
+    h1.title= title
+    div.right
+      if user
+        p.text Welcome #{user.name}
+      <a href="/forum/add/" class='btn'>Add Forum</a>
+    each forum in forums.reverse()
+      div.card
+        div.card-title #{forum.title}
+        div.card-user  <img src="#{forum.image}" class="pic"/> #{forum.user}
+        div.card-content #{forum.content}
+          if forum.comments
+          each comment in forum.comments
+            div.forumComment
+              div.card-user  <img src="#{comment.image}" class="pic"/> #{comment.user}
+              div.card-content #{comment.content}
+        if user
+        div.right
+          a(href="/forum/comment/" + forum._id,class='btn') Comment
+            if user.name == forum.user
+              a(href="/forum/delete/" + forum._id,class='btn') Delete
+              a(href="/forum/edit/" + forum._id,class='btn') Edit

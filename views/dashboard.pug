@@ -1,0 +1,66 @@
+extends jpLayout
+
+block content
+  div(class="user")
+    div(class="container text-center")
+      div(class="row")
+        div(class="col-4 test")
+            p(class="Username") #{user.name}             
+            img(src=`${user.image}` class="img-thumbnail")
+            div(class="usertag-jp")
+              p #{user.email} 
+              p #{user.position}
+              p #{user.company}
+            a(href=`profile/edit` class="btn btn-primary") Edit Profile
+        div(class="col-8 info")
+            div(class="row")
+              div(class="col")
+                h3(class="Learning") Technologies Learning
+                each learn in user.learning 
+                  ul(class="list-group")
+                    li(class="list-group-item list-group-item-dark") #{learn}
+                    br
+              div(class="col")
+                h3(class="Known") Technologies Known
+                each expert in user.expert 
+                  ul(class="list-group")
+                    li(class="list-group-item list-group-item-dark") #{expert}
+                    br
+  div(class="connectionKnown")
+    div(class="row")
+      div(class="col")
+        h1 Network with people expert in your learning
+        div(class="row")
+          if userExperts 
+            each userExpert in userExperts 
+                div(class="col") 
+                  div(class="card test" style="width: 18rem;")
+                    div(class="card-body")
+                      h5(class="card-title") #{userExpert.name}
+                      h6(class="card-subtitle mb-2 text-muted") #{userExpert.position} | #{userExpert.company}
+                      p(class="card-text") Technologies Known: #{userExpert.expert}
+                      a(href=`/userConnect/${userExpert.id}` class="btn btn-primary") Connect
+
+  
+  div(class="connectionKnown")
+    div(class="row")
+      div(class="col")
+        h1 Network with people who's learning technologies you know
+        div(class="row")
+          if helpUsers   
+              each userLearn in helpUsers 
+                div(class="col")
+                  div(class="card test" style="width: 18rem;")
+                    div(class="card-body")
+                      h5(class="card-title") #{userLearn.name}
+                      h6(class="card-subtitle mb-2 text-muted") #{userLearn.position} | #{userLearn.company}
+                      p(class="card-text") Technologies Learning: #{userLearn.learning}
+                      a(href=`/userConnect/${userLearn.id}` class="btn btn-primary") Connect
+
+
+                    
+
+
+       
+
+  

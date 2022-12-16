@@ -1,0 +1,19 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/moeDev.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+  body
+    block content
+        .signup-parent-container-modev
+            .signup-parent-filed-container-modev
+                h1.signup-text Login
+                if errors
+                        each error in errors
+                            .errors-moedev
+                                p(style="color:red") #{error.msg}
+                form.signup-form-modev(action="/login" method="POST")
+                    input.signup-input-moedev(type="text" name="email" placeholder="Email" required)
+                    input.signup-input-moedev(type="password" name="password" placeholder="Password" required)
+                    input.btn.btn-dark(type="submit" value="Submit")
+                    a(href="/signup") I dont not have an account!

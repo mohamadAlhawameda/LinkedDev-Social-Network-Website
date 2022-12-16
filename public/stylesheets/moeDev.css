@@ -1,0 +1,58 @@
+a {
+    color: #00B7FF;
+  }
+  .signup-parent-container-modev{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/WhatsApp\ Image\ 2022-12-07\ at\ 3.36.50\ AM.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  .signup-parent-filed-container-modev{
+    height: auto;
+    width: 500px;
+    background-color: white;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    padding: 0 10px;
+  }
+  .signup-form-modev{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid red 1px; */
+    width: 100%;
+  
+  
+  
+  }
+  .signup-input-moedev{
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: bold;
+  
+  }
+  .signup-input-moedev::placeholder{
+    color: black;
+    opacity: 1;
+  }
+  .signup-text{
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+  }
+  .errors-moedev{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
